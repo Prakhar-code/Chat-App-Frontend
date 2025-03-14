@@ -1,12 +1,47 @@
-# React + Vite
+# Chat-App-Frontend 💻💬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **frontend** of the Chat Application! This part of the project is built using **React**, **Daisy UI**, and **JavaScript**. The project is optimized for fast development using **Vite**.
 
-Currently, two official plugins are available:
+## Table of Contents 📚
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Features](#Features)
+- [Contributing](#Contributing)
 
-## Expanding the ESLint configuration
+## Installation 🛠️
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To get started with the project, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Prakhar-code/Chat-App-Frontend.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Chat-App-Frontend
+    ```
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+## Usage 🚀
+
+1. Start the development server:
+    ```bash
+    npm run dev
+    ```
+2. The backend will be running on [http://localhost:5173](http://localhost:5173).
+
+## Features
+
+- Real-time chat functionality
+- User authentication
+- Responsive design using Daisy UI
+- Fast and optimized development with Vite
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request with your changes. Make sure to follow the code style and include tests for any new features or bug fixes.
+
