@@ -1,5 +1,7 @@
 import {create} from 'zustand' ;
 import axiosInstance from '../lib/axios.js';
+import { io } from 'socket.io-client';
+import { toast } from 'react-toastify';
 
 
 export const useAuthStore = create((set) => ({
@@ -7,7 +9,9 @@ export const useAuthStore = create((set) => ({
   isSigningUp: false,
   isLoggingIn: false,
   isUpdatingProfile: false,
-  isChekingAuth: true,
+  isCheckingAuth: true,
+  onlineUsers: [],
+  socket: null,
 
   checkAuth: async() => {
     try {
@@ -18,7 +22,21 @@ export const useAuthStore = create((set) => ({
         console.log("Error in checkAuth:", error);
         set({authUser: null})
     } finally {
-        set({isChekingAuth: false});
+        set({isCheckingAuth: false});
+    }
+  },
+
+  signup: async (formData) => {
+    set({ isSigningUp: true });
+    try {
+      const res = await axiosInstance.post("/auth/signup", formData);
+      set({ authUser: res.data });
+      toast.success("Account created successfully");
+      get().connectSocket();
+    } catch (error) {
+      toast.error(error.response.data.message);
+    } finally {
+      set({ isSigningUp: false });
     }
   },
 
